@@ -1,7 +1,6 @@
 // <3!!! https://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailnamespacing
 
 var gpsLocator = (function () {
- 
     // privates
 
         /***
@@ -53,6 +52,7 @@ var gpsLocator = (function () {
 
                 (geo_position_js.init())?ET.fire(GPS_AVAILABLE):ET.fire(GPS_UNAVAILABLE);
             }
+              console.log("Joepie de GPS gegevens");
         }, 
 
           detLocation : function detLocation() {
@@ -108,7 +108,9 @@ var gpsLocator = (function () {
                 var pos1 = new google.maps.LatLng(p1.coords.latitude, p1.coords.longitude);
                 var pos2 = new google.maps.LatLng(p2.coords.latitude, p2.coords.longitude);
                 return Math.round(google.maps.geometry.spherical.computeDistanceBetween(pos1, pos2), 0);
-            }},
+            }
+          console.log("Joepie de location gegevens");
+          },
           
           googleMaps : function googleMaps() {
               // GOOGLE MAPS FUNCTIES
@@ -207,6 +209,15 @@ var gpsLocator = (function () {
                 function set_custom_debugging(debugId){
                     debugId = this.debugId;
                     customDebugging = true;
-                }}
+                }
+          console.log("Joepie de GoogleMaps gegevens");
+          },    
   };
-})();
+        
+}   
+)();
+
+    console.log(gpsLocator.public());
+    console.log(gpsLocator.gpsOn());
+    console.log(gpsLocator.detLocation());
+    console.log(gpsLocator.googleMaps());
