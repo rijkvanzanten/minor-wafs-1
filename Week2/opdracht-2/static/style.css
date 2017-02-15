@@ -51,8 +51,6 @@ nav ul {
     justify-content: space-around;
 }
 
-#rijksmuseum
-
 
 nav ul li {
     list-style-type: none;
@@ -66,6 +64,10 @@ nav ul li a {
     font-weight: bold;
     letter-spacing: .15em;
     text-transform: uppercase;
+}
+
+nav ul li a:hover, nav ul li a:active {
+    color: #80CED6;
 }
 /*End Navigation*/
 
@@ -113,10 +115,11 @@ main {
 .media-item {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     align-content: space-around;
     align-items: flex-start;
-    margin-bottom: 1em;
     flex-basis: 22em;
+    margin: 0.5em;
     padding: 1em;
     background: white;
 }
@@ -171,7 +174,16 @@ input#user-input-field:focus, button:focus {
     width: 20em;
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: white !important;
+}
 
 
 

@@ -29,8 +29,10 @@
             <div class="searchField">
                <h1>Bekijk alle kunstwerken van het Rijksmuseum!</h1>
                 <p>Voer een zoekterm in:</p>
-                <input type="text" id="user-input-field" required>&nbsp;
-                <button type="button" onclick="getUserQuery()">Submit</button>
+                <form class="column">
+                    <input type="text" id="user-input-field" autofocus required>
+                    <button type="submit" onclick="getUserQuery()">Submit</button>
+                </form>
             </div>
 
             <article id="queryResult">
@@ -38,8 +40,9 @@
             </article>
         </section>
     </main>
-    <script src="static/app.js"></script>
+
     <script src="static/aja.js-0.4.1/aja.min.js"></script>
-    <script src="static/api.js"></script>
+    <script src="static/routie-master/dist/routie.min.js"></script>
+    <script src="static/app.js"></script>
 </body>
 </html>
