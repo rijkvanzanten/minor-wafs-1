@@ -42,6 +42,7 @@ nav {
     justify-content: flex-end;
     width: 100vw;
     position: fixed;
+    z-index: 3;
 }
 
 nav ul {
@@ -113,6 +114,7 @@ main {
 }
 
 .media-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -123,6 +125,60 @@ main {
     padding: 1em;
     background: white;
 }
+
+.media-item a::after {
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    content: '';
+}
+
+.media-item h1 a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: flex-start;
+    width: 80vw;
+    padding: 1em;
+    background: white;
+    position: relative;
+    margin: 0.5em;
+    margin-top: 5em;
+}
+
+.detail-item p {
+    align-self: flex-start;
+}
+
+.detail-item img {
+    width: 50%;
+}
+
+/*svg previous page*/
+img[alt="previous-page"] {
+    position: relative;
+    width: 4em;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin-left: 1em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+}
+
+
 
 input[id="user-input-field"], button {
     width: 20em;
@@ -184,6 +240,7 @@ input#user-input-field:focus, button:focus {
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     background-color: white !important;
 }
+
 
 
 

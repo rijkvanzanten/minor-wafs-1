@@ -9,11 +9,9 @@
     <meta name="author" content="Cyd Stumpel">
     <link rel="stylesheet" href="static/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Scope+One" rel="stylesheet">
-    </head>
-
 </head>
 
-<body>
+<body> 
     <nav>
         <ul id="navUl">
             
@@ -31,7 +29,7 @@
                 <p>Voer een zoekterm in:</p>
                 <form class="column">
                     <input type="text" id="user-input-field" autofocus required>
-                    <button type="submit" onclick="getUserQuery()">Submit</button>
+                    <button type="submit" id="getUserQuery">Submit</button>
                 </form>
             </div>
 
@@ -39,10 +37,15 @@
 <!--                Hier wordt content ingeladen via de API van het Rijksmuseum-->
             </article>
         </section>
+        <section id="kunstObject">
+            <article id="detailKunst"></article>
+                
+        </section>
     </main>
 
     <script src="static/aja.js-0.4.1/aja.min.js"></script>
     <script src="static/routie-master/dist/routie.min.js"></script>
+    <script src="static/transparency-master/dist/transparency.min.js"></script>
     <script src="static/app.js"></script>
 </body>
 </html>
