@@ -38,14 +38,52 @@
             </article>
         </section>
         <section id="kunstObject">
-            <article id="detailKunst"></article>
+            <article id="detailKunst">
+<!--                div class detail-item-->
+                <a href="#rijksmuseum">
+                    <img src="img/back.svg" alt="previous-page">
+                </a>
                 
+                <div class="container"> 
+                    <h1 class="title"></h1>
+                    <p class="description"></p>
+                    <p class="artist"></p>
+                </div>
+                
+            
+            
+            </article>   
         </section>
     </main>
 
-    <script src="static/aja.js-0.4.1/aja.min.js"></script>
-    <script src="static/routie-master/dist/routie.min.js"></script>
-    <script src="static/transparency-master/dist/transparency.min.js"></script>
-    <script src="static/app.js"></script>
+    <script src="static/js/aja.min.js"></script>
+    <script src="static/js/routie.min.js"></script>
+    <script src="static/js/transparency.min.js"></script>
+    <script src="static/js/handlebars.js"></script>
+    <script src="static/js/app.js"></script>
+    <script id="basic-template" type="text/x-handlebars-template">
+        <div class="media-item" id={{objectId}}> 
+            <h1><a href="#rijksmuseum{{objectId}}">{{artist}}</a></h1> 
+            <p>{{title}}</p>
+            <img src= " {{objectImage}} " alt="{{title}}"> 
+        </div>
+    </script>
+    
+    <script id="detail-template" type="text/x-handlebars-template">
+        <div class="detail-item" id="SK-A-372">
+            {{#if objectImage}}
+                <img src={{objectImage}} alt={{title}}/>
+            
+            {{else}}
+            <img src="img/nophoto.png" alt="Er is helaas geen foto beschikbaar"/>
+            {{/if}}
+            <a href="#rijksmuseum"><img src="img/back.svg" alt="previous-page"></a>
+            <div class="container"> 
+                <h1>{{title}}</h1>
+                <p>{{description}}</p>
+                <p> Gemaakt door: {{artist}}</p>
+            </div>
+        </div>
+    </script>
 </body>
 </html>
