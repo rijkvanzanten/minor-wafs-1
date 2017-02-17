@@ -74,7 +74,7 @@
             aja()
                 .url(detailUrl)
                 .on('success', function(detail){
-                    console.log("api is loaded");
+                    console.log('api is loaded');
                     var object = detail.artObject;
 
                     var context = {
@@ -85,7 +85,7 @@
                         artist: object.principalOrFirstMaker
                     };
 
-                    var source = document.getElementById("detail-template").innerHTML;
+                    var source = document.getElementById('detail-template').innerHTML;
                     var template = Handlebars.compile(source);
                     var htmlDetail = template(context);
 
@@ -95,12 +95,12 @@
         },
         toggle: function(route) { //route is locationhash declared in routes.
             document.querySelectorAll('section').forEach(function(section) {
-                var sectionHash = "#" + section.id;
+                var sectionHash = '#' + section.id;
 
                 if (sectionHash === route) {
-                    section.classList.remove("hide");
+                    section.classList.remove('hide');
                 } else {
-                    section.classList.add("hide");
+                    section.classList.add('hide');
                 }
             });
         }
@@ -119,7 +119,7 @@
         aja()
             .url(config.apiUrl + config.userQuery)
             .on('success', function(obj) {
-                console.log("api is loaded");
+                console.log('api is loaded');
 
                 obj.artObjects.map(function(element) {
                     console.log(element);
@@ -127,11 +127,11 @@
                         config.htmlCollection += '<div class="media-item" id="' + element.objectNumber +'"> <h1><a href="#rijksmuseum/'+element.objectNumber +'">' + element.principalOrFirstMaker + '</a></h1> <p>' + element.title + '</p>';
                         config.htmlCollection += '<img src = "' + element.webImage.url + '" alt = ' + element.longTitle + '/> </div>';
                     } else {
-                        console.log("Er is helaas geen foto beschikbaar voor: " + element.title);
+                        console.log('Er is helaas geen foto beschikbaar voor: ' + element.title);
                     }
                 });
 
-                document.getElementById("queryResult").innerHTML = config.htmlCollection;
+                document.getElementById('queryResult').innerHTML = config.htmlCollection;
             })
             .go();
     });
