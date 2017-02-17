@@ -22,7 +22,7 @@ https://sidstumple.github.io/w1-opdracht/#home
 Using frameworks & libraries is faster, cheaper and, some of the time, easier. Why should or shouldn't we use a framework like jQuery or Angular?
 
 
-## Pros
+### Pros
 * They offer a more responsive user experience. JS frameworks load in portions when the user interacts with them. This speeds up the responsiveness of the user interface *(Hannah, 2015)*.
 * Stable code base & a good set of features to begin with = less work *(Uzayr, 2016)*.
 * You don't have to bother with cross-browser compatibility, security flaws in code, namespaces and core functions, etc. All of that is taken care of by the framework itself *(Uzayr, 2016)*.
@@ -33,7 +33,7 @@ Using frameworks & libraries is faster, cheaper and, some of the time, easier. W
 * JS frameworks help you ship code faster and increase development velocity *(Darveau, 2016)*.
 * JS frameworks force you to focus on your app's value rather than its implementation *(Darveau, 2016)*.
 
-## Cons
+### Cons
 * Frameworks are heavier, when doing a smaller project you don't need it *(Uzayr, 2016)*.
 * You learn the framework, not the language *(1stwebdesigner,2015)*.
 * Frameworks core behavior cannot be changed *(1stwebdesigner,2015)*.
@@ -46,11 +46,11 @@ Using frameworks & libraries is faster, cheaper and, some of the time, easier. W
 We should learn vanilla JavaScript to make ourselves not only understand the inner workings of our frameworks better but also to help with every new framework we want to learn. More than 10 JS frameworks have made the news in the past 5 years *(Darveau, 2016)*, how many will follow? It will be hard to keep up with the technology with no solid base knowledge of JS.
   
   
-# Pros & cons of a single-page web app 
+## Pros & cons of a single-page web app 
 In this minor course we're going to create a single-page web app. What are the pros & cons about applying this way of developing applications?
 In the early days of the Internet, most web sites consisted of largely static pages filled with content but expecting minimal interactions from the end user. As the Internet grew over the past few decades, however, many web sites began seeking ways to interact with their users; creating a more streamlined and fluid user experience for these interactions. To this effect IFrames were created to allow small modules of content to be dynamically loaded without requiring a reload of the entire web page. Shortly after this, the Ajax specification was adopted as an enhanced method of implementing web applications that could maintain their current state while still communicating with a server in the background. This ability to dynamically load content and modify the state of the page without actually requiring a new page to be loaded led into the design of Single-Page Applications, or SPAs *(Ingram-Westover, 2015)*.
 
-## Pros
+### Pros
 * More fluid user experience *(Ingram-Westover, 2015)*.
 * No page reloads, no extra waiting time *(Skólski, 2016)*.
 * Easier for the user *(Skólski, 2016)*.
@@ -58,7 +58,7 @@ In the early days of the Internet, most web sites consisted of largely static pa
 * Easy to debug with Chrome, through network operations monitoring *(Skólski, 2016)*.
 * Easier to turn into a native app, backend can be reused *(Skólski, 2016)*.
 
-## Cons
+### Cons
 * Tend to be slower on initial page load because they require loading the framework and the application code prior to rendering the required view in the browser. *(Ingram-Westover, 2015)*.
 * Old browsers might get lost and won't be able to go back or forward anymore *(Ingram-Westover, 2015)*.
 * More work and harder to maintain when working in a team *(Ingram-Westover, 2015)*.
@@ -68,7 +68,7 @@ In the early days of the Internet, most web sites consisted of largely static pa
 
 SPA's are really not progressively enhanceable to work in older browsers, they do however give a very nice user experience. It's hard to maintain in a team, because of it's very intricate structure. Initial loading time is pretty long but when it's loaded the app has no loading time at all anymore.
 
-## Sources
+### Sources
 * 1stwebdesigner. (2015, 28 mei). __Web Frameworks: Pros And Cons Of Using Frameworks.__ Geraadpleegd van http://1stwebdesigner.com/web-frameworks/
 * Darveau, F. X. (2016, 18 augustus). __Yes, You Should Learn Vanilla JavaScript Before Fancy JS Frameworks.__ Geraadpleegd van https://snipcart.com/blog/learn-vanilla-javascript-before-using-js-frameworks
 * Hannah, J. (2015, 09 april). __Choosing the Right JavaScript Framework for the Job.__ Geraadpleegd van https://www.lullabot.com/articles/choosing-the-right-javascript-framework-for-the-job
