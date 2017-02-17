@@ -94,18 +94,15 @@
             .go();
         },
         toggle: function(route) { //route is locationhash declared in routes.
-            var section = document.querySelectorAll('section');
+            document.querySelectorAll('section').forEach(function(section) {
+                var sectionHash = "#" + section.id;
 
-            for (i = 0; i < section.length; i++) {
-                var sectionList = section[i];
-                var sectionsId = "#" + section[i].id;
-
-                if (sectionsId === route) {
-                    sectionList.classList.remove("hide");
+                if (sectionHash === route) {
+                    section.classList.remove("hide");
                 } else {
-                    sectionList.classList.add("hide");
+                    section.classList.add("hide");
                 }
-            }
+            });
         }
     };
 
