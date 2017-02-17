@@ -90,8 +90,8 @@
                     var htmlDetail = template(context);
 
                     document.getElementById('detailKunst').innerHTML = htmlDetail;
-            })
-            .go();
+                  })
+                  .go();
         },
         toggle: function(route) { //route is locationhash declared in routes.
             document.querySelectorAll('section').forEach(function(section) {
