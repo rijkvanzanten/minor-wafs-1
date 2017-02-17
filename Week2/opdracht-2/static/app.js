@@ -124,8 +124,13 @@
                 obj.artObjects.map(function(element) {
                     console.log(element);
                     if (element.webImage !== null) {
-                        config.htmlCollection += '<div class="media-item" id="' + element.objectNumber +'"> <h1><a href="#rijksmuseum/'+element.objectNumber +'">' + element.principalOrFirstMaker + '</a></h1> <p>' + element.title + '</p>';
-                        config.htmlCollection += '<img src = "' + element.webImage.url + '" alt = ' + element.longTitle + '/> </div>';
+                        config.htmlCollection = `
+                          <div class="media-item" id="${element.objectNumber}">
+                            <h1><a href="#rijksmuseum/${element.objectNumber}">${element.principalOrFirstMaker}</a></h1>
+                            <p>${element.title}</p>
+                            <img src="${element.webImage.url}" alt="${element.longTitle}" />
+                          </div>
+                        `;
                     } else {
                         console.log('Er is helaas geen foto beschikbaar voor: ' + element.title);
                     }
